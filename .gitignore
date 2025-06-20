@@ -1,7 +1,28 @@
-
-# Playwright
+# Dependencies
 node_modules/
+
+# Playwright Test Artifacts
 /test-results/
 /playwright-report/
 /blob-report/
 /playwright/.cache/
+
+# Environment variables
+# Never commit secrets!
+.env*
+
+# IDE & Editor Config
+.vscode/
+.idea/
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+
+# Build output
+dist/
+build/
+
+# Log files
+*.log
+npm-debug.log*

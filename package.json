@@ -2,13 +2,31 @@
   "name": "ai-adoption-week3",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {},
-  "keywords": [],
+  "scripts": {
+    "test": "cross-env NODE_ENV=production playwright test",
+    "test:headed": "cross-env NODE_ENV=production playwright test --headed",
+    "test:debug": "playwright test --debug",
+    "test:staging": "NODE_ENV=staging playwright test --project=staging",
+    "test:ui": "playwright test --ui",
+    "test:report": "playwright show-report",
+    "test:install": "playwright install",
+    "test:codegen": "playwright codegen",
+    "test:trace": "playwright show-trace"
+  },
+  "keywords": [
+    "playwright",
+    "testing",
+    "e2e",
+    "automation"
+  ],
   "author": "",
   "license": "ISC",
-  "description": "",
+  "description": "Playwright test automation framework with environment configuration",
   "devDependencies": {
     "@playwright/test": "^1.53.0",
-    "@types/node": "^24.0.3"
+    "@types/node": "^24.0.3",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.5.0",
+    "typescript": "^5.8.3"
   }
 }
